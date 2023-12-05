@@ -1,0 +1,22 @@
+package pu1;
+
+import java.util.Scanner;
+
+public class Uppg3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Din ålder: ");
+		System.out.println("Kompis ålder: ");
+		System
+		
+		int ålder1 = input.nextInt();
+		int ålder2 = input.nextInt();
+		int ålder3 = input.nextInt();
+		
+		
+
+	}
+
+}

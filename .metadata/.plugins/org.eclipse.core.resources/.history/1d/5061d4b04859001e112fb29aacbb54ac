@@ -1,0 +1,50 @@
+package pu3;
+
+import java.util.Scanner;
+
+public class Uppg3 {
+
+	public static void main(String[] args) {
+		// Scannerobjekt
+		Scanner input = new Scanner(System.in);
+
+		
+		//variabler
+		double [] dec = new double [100];
+		boolean run = true;
+		char svar;
+				
+		
+		
+		
+		while(run) {
+			//skriv ett decimaltal
+			System.out.println("Skriv ett decimaltal");
+			double decTal = input.nextDouble();
+			
+			System.out.println("Vill du skriva in ett nytt tal? j/n");
+			svar = input.next().charAt(0);
+			if(svar == 'n') {
+				run = false;
+			}
+		}
+		
+		
+		/* do {
+			System.out.println("Vill du skriva ett till tal?");
+			char svar = input.next().charAt(0);
+			if(svar == 'j') {
+				run = false;
+			}
+			
+		}while(run);*/
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

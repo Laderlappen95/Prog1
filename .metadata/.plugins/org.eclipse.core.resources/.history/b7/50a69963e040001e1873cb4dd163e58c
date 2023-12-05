@@ -1,0 +1,16 @@
+package utmatning;
+
+public class IntroTE2a {
+
+	public static void main(String[] args) {
+		// Utmatning
+		System.out.print("Hej Hej");
+		System.out.print("Hej igen");
+		//Utskrift med radbyte
+		System.out.println("Ny rad?");  //Radbyte efter
+		System.out.println("Ny rad"); 
+		
+
+	}
+
+}

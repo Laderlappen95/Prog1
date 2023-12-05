@@ -1,0 +1,15 @@
+package packet;
+
+public class Lucka1 {
+
+	public static void main(String[] args) {
+		int tal = 0;
+		for(int i = 127; 267>=i; i++) {
+			 tal = i;
+			 tal = tal + i;
+		}
+		System.out.println(tal);
+
+	}
+
+}

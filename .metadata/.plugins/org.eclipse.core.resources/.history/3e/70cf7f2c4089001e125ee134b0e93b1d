@@ -1,0 +1,47 @@
+package inlupp2;
+
+import java.util.Scanner;
+
+public class Elliot {
+	
+	public static void main (String [] args) {
+	Scanner input = new Scanner(System.in);
+	System.out.println("Hur många positioner vill du ha i din array?");
+	int positioner = input.nextInt();
+	char [] bokstav = (tecken(positioner));
+	System.out.println( "Antalet talare av Romani Chib minskar i Sverige" +
+			"Vad finns det för orsaker till att antalet romer som talar romani, speciellt svensk romani, har minskat, trots att det är deras modersmål?"
+
+			+	"	En av orsakerna till att talarna av romani chib i Sverige har "
+);
+	
+	System.out.println("Antalet a:n i arrayen är: " + an(bokstav));
+	
+		
+	}
+	public static char[] tecken(int antal) {
+		char[] hurm = new char[antal];
+		int siffra = 0;
+		for(int i = 0; antal > i; i++) {
+			siffra = (int)(Math.random()*122);
+			if(siffra > 96) {
+				hurm[i] = (char)siffra;
+			}
+			else {
+				i--;
+			}
+		}
+		return hurm;
+		
+	}
+	public static int an(char[] tecken){
+		int antal = 0;
+		for(int i = 0; tecken.length > i; i++) {
+			if(tecken[i] == 'a') {
+				antal++;
+			}
+		}
+		return antal;
+	}
+
+}

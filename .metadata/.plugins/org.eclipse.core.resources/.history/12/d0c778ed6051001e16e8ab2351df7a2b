@@ -1,0 +1,19 @@
+package pu3;
+
+import java.util.Scanner;
+
+public class Uppg1 {
+
+	public static void main(String[] args) {
+		// Scannerobjekt
+		Scanner input = new Scanner(System.in);
+
+		int tal = 0;
+		int count;
+		
+		while(tal <= 5) {
+			System.out.println(tal);
+		}
+	}
+
+}

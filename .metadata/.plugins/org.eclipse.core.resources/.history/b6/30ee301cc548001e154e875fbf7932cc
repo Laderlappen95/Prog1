@@ -1,0 +1,29 @@
+package extrauppgifter;
+
+import java.util.Scanner;
+
+public class Uppg2komma6b {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Hur mycket pengar vill du ha:");
+		
+		int tal = input.nextInt();
+		
+		tal = tal + 100;
+		
+		int tal3 = tal %500;
+		
+		int tal2 = tal%100;
+		
+		tal3 = tal3-tal2;
+		
+		tal2 = tal-tal2;
+		
+		System.out.println(tal3 +"x500 " + tal2+ "x100");
+
+	}
+
+}

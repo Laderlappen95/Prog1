@@ -1,0 +1,27 @@
+package pu1;
+
+import java.util.Scanner;
+
+public class Uppg3 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Din ålder: ");
+		
+		int ålder1 = input.nextInt();
+		
+		System.out.println("Kompis ålder: ");
+	
+		int ålder2 = input.nextInt();
+		System.out.println("Kompis nr 2 ålder: ");
+		
+		int ålder3 = input.nextInt();
+		
+		double medel = (ålder1 + ålder2 + ålder3) / 3;
+		
+		System.out.println("Er medelålder är: " +medel);
+
+	}
+
+}

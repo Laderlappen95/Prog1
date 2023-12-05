@@ -1,0 +1,21 @@
+package pu1;
+
+import java.util.Scanner;
+
+public class Uppg1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Skriv in längd:");
+		
+		int längd = input.nextInt();
+		int bredd = input.nextInt();
+		
+		System.out.println("Arean är: "+ bredd * längd);
+		
+		
+
+	}
+
+}

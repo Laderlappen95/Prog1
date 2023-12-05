@@ -1,0 +1,23 @@
+package pu3;
+
+import java.util.Scanner;
+
+public class Uppg3 {
+
+	public static void main(String[] args) {
+		// Scannerobjekt
+		Scanner input = new Scanner(System.in);
+
+		
+		System.out.println("Skriv ett decimaltal");
+		
+		double [] dec = new double [100];
+		
+		
+		
+		
+		
+		
+	}
+
+}

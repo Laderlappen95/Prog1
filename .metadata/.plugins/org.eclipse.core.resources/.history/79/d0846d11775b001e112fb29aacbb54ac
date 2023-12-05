@@ -1,0 +1,32 @@
+package pu3;
+
+import java.util.Scanner;
+
+public class Uppg4 {
+
+	public static void main(String[] args) {
+		// Scannerobjekt
+		Scanner input = new Scanner(System.in);
+		
+		//a)
+		//variabler
+		int[] dec = new int[100];
+		boolean run = true;
+		int tal [] = new int [100];
+		
+		
+		
+		do {
+			System.out.println("Skriv ut ett heltal:");
+			tal[] = input.nextInt();
+			
+			
+		}while(run);
+		System.out.println("Du skrev talen: ");
+		
+		
+		
+
+	}
+
+}

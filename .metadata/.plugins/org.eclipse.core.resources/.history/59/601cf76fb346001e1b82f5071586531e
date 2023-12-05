@@ -1,0 +1,21 @@
+package pu1;
+
+import java.util.Scanner;
+
+public class Uppg2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		
+		System.out.println("Ange temperatur i Farenheit: ");
+		double tempF = input.nextDouble();  // C = (F - 32) . 0.56
+		
+		double tempC = (tempF - 32) * 0.56;
+		
+		System.out.println(tempF + "° Farenheit i Celsius är" + tempC +"°");
+		
+
+	}
+
+}

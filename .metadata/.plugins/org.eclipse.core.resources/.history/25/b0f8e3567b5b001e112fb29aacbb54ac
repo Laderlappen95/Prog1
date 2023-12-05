@@ -1,0 +1,38 @@
+package pu3;
+
+import java.util.Scanner;
+
+public class Uppg3 {
+
+	public static void main(String[] args) {
+		// Scannerobjekt
+		Scanner input = new Scanner(System.in);
+
+		
+		//variabler
+		
+		double[] dec = new double[100];
+		boolean run = true;
+		int count = 0;
+		char svar;
+		
+		do {
+			System.out.println("Skriv in ett decimaltal: ");
+			dec [0] = input.nextDouble();
+			System.out.println("Vill du fortsätta? j/n");
+			svar = input.next().charAt(0);
+			if(svar == 'n') {
+				run = false;
+			}
+		}while(run);
+		System.out.println("Det första talet du skrev in va: " + dec[0]);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,438 @@
+package paket;
+
+import java.util.Scanner;
+
+public class YatzyTvåPunktNoll {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		//Variabler
+		
+		int dice[] = new int[10];
+		boolean run = true;
+		int val[] = new int[10];
+		String namn[] = new String[5];
+		int var1[] = new int[20];
+		int var2 [] = new int[20];
+		int var3[] = new int[20];
+		int var4[] = new int[20];
+		int var5[] = new int[20];
+ 		
+		System.out.println("Spelare\t|" + "_" + "\t|" + "_" + "\t|" + namn[2] + "\t|" + namn[3] + "\t|" + "_" + "\t| Nummer");
+		System.out.println("Ettor: \t|" + "_" + "\t|" + "_" + "\t|" + val3[1] + "\t|" + val4[1] + "\t|" + "_"  + "\t| 1");
+		System.out.println("Tvåor: \t|" + "_" + "\t|" + "_"  + "\t|" + val3[2] + "\t|" + val4[2] + "\t|" + "_" + "\t| 2");
+		System.out.println("Treor: \t|" + "_" + "\t|" + "_" + "\t|" + val3[3] + "\t|" + val4[3] + "\t|" +"_"  + "\t| 3");
+		System.out.println("Fyror: \t|" + "_" + "\t|" + "_" + "\t|" + val3[4] + "\t|" + val4[4] + "\t|" + "_" + "\t| 4");
+		System.out.println("Femmor:\t|" + "_" + "\t|" + "_" + "\t|" + val3[5] + "\t|" + val4[5] + "\t|" + "_" + "\t| 5");
+		System.out.println("Sexor: \t|" + "_" + "\t|" + "_" + "\t|" + val3[6] + "\t|" + val4[6] + "\t|" + "_" + "\t| 6");
+		System.out.println("Summa: \t|" + "_" + "\t|" + "_" + "\t|" + val3[7] + "\t|" + val4[7] + "\t|" + "_" + "\t| 7");
+		System.out.println("Bonus: \t|" + "_" + "\t|" + "_" + "\t|" + val3[8] + "\t|" + val4[8] + "\t|" + "_" + "\t| 8");
+		System.out.println("Par: \t|" + "_" + "\t|" + "_" + "\t|" + val3[9] + "\t|" + val4[9] + "\t|" + "_" + "\t| 9");
+		System.out.println("2-par: \t|" + "_" + "\t|" + "_" + "\t|" + val3[10] + "\t|" + val4[10] + "\t|" + "_" + "\t| 10");
+		System.out.println("3-tal: \t|" + "_" + "\t|" + "_" + "\t|" + val3[11] + "\t|" + val4[11] + "\t|" + "_" + "\t| 11");
+		System.out.println("4-tal: \t|" + "_" + "\t|" + "_" + "\t|" + val3[12] + "\t|" + val4[12] + "\t|" + "_" + "\t| 12");
+		System.out.println("Kåk: \t|" + "_" + "\t|" + "_" + "\t|" + val3[13] + "\t|" + val4[13] + "\t|" + "_" + "\t| 13");
+		System.out.println("Ls: \t|" + "_" + "\t|" + "_" + "\t|" + val3[14] + "\t|" + val4[14] + "\t|" + "_" + "\t| 14");
+		System.out.println("Ss: \t|" + "_" + "\t|" + "_" + "\t|" + val3[15] + "\t|" + val4[15] + "\t|" + "_" + "\t| 15");
+		System.out.println("Chans: \t|" + "_" + "\t|" + "_" + "\t|" + val3[16] + "\t|" + val4[16] + "\t|" + "_" + "\t| 16");
+		System.out.println("YATZY: \t|" + "_" + "\t|" + "_" + "\t|" + val3[17] + "\t|" + val4[17] + "\t|" + "_" + "\t| 17");
+		System.out.println("Summa: \t|" + "_" + "\t|" + "_" + "\t|" + val3[0] + "\t|" + val4[7] + "\t|" + "_" + "\t|");
+		
+			
+		System.out.println("Hur många spelare? Max 5");
+		int spelare = input.nextInt();
+		
+		if(spelare == 1) {
+			System.out.println("Vad heter du? Använd inte mer än 6 tecken");
+			namn[0] = input.next();
+		}
+		else if(spelare == 2) {
+			System.out.println("Vad heter ni? Använd inte mer än 6 tecken");
+			namn[0] = input.next();
+			namn[1] = input.next();
+		}
+		else if(spelare == 3) {
+			System.out.println("Vad heter ni? Använd inte mer än 6 tecken");
+			namn[0] = input.next();
+			namn[1] = input.next();
+			namn[2] = input.next();
+		}
+		else if(spelare == 4) {
+			System.out.println("Vad heter ni? Använd inte mer än 6 tecken");
+			namn[0] = input.next();
+			namn[1] = input.next();
+			namn[2] = input.next();
+			namn[3] = input.next();
+		}
+		else if(spelare == 5) {
+			System.out.println("Vad heter ni? Använd inte mer än 6 tecken");
+			namn[0] = input.next();
+			namn[1] = input.next();
+			namn[2] = input.next();
+			namn[3] = input.next();
+			namn[4] = input.next();
+		}
+		
+		do {
+		
+		dice[0] = (int)(Math.random()*6+1);
+		dice[1] = (int)(Math.random()*6+1);
+		dice[2] = (int)(Math.random()*6+1);
+		dice[3] = (int)(Math.random()*6+1);
+		dice[4] = (int)(Math.random()*6+1);
+		
+		System.out.println("Tärning 1: " + dice[0]);
+		System.out.println("Tärning 2: " + dice[1]);
+		System.out.println("Tärning 3: " + dice[2]);
+		System.out.println("Tärning 4: " + dice[3]);
+		System.out.println("Tärning 5: " + dice[4]);
+		
+		System.out.println("Vill du slå om nån tärning? j/n");
+		char slaom = input.next().charAt(0);
+			if(slaom == 'j') {
+				System.out.println("Hur många vill du slå om?");
+					int slaom2 = input.nextInt();
+						if(slaom2 == 1) {
+							System.out.println("Vilken vill du slå om?");
+							val[0] = input.nextInt();
+							if(val[0] == 1) {
+								dice[0] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2) {
+								dice[1] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 3) {
+								dice[2] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 4) {
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 5) {
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+						}
+						
+						//OM DU VÄLJER ATT SLÅ OM 2
+						
+						else if(slaom2 == 2) {
+							if(val[0] == 1 && val[1] == 2) {
+							dice[0] = (int)(Math.random()*6+1);
+							dice[1] = (int)(Math.random()*6+1);
+							System.out.println("Tärning 1: " + dice[0]);
+							System.out.println("Tärning 2: " + dice[1]);
+							System.out.println("Tärning 3: " + dice[2]);
+							System.out.println("Tärning 4: " + dice[3]);
+							System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 3) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 4) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 3) {
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 4) {
+								dice[1] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 5) {
+								dice[1] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 3 && val[1] == 4) {
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 3 && val[1] == 5) {
+								dice[2] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 4 && val[1] == 5) {
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							 
+						}		//Till om du väljer att slå om 2
+						
+						//OM DU VÄLJER ATT SLÅ OM 3
+						
+						else if(slaom2 == 3) {
+							if(val[0] == 1 && val[1] == 2 && val[2] == 3) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 2 && val[2] == 4) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 2 && val[2] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 3 && val[2] == 4) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 3 && val[2] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 4 && val[2] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 3 && val[2] == 4) {
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 3 && val[2] == 5) {
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 3 && val[1] == 4 && val[2] == 5) {
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+						}//Till om du vill slå om 3
+						
+						
+						//OM DU VÄLJER ATT SLÅ OM 4
+						
+						else if(slaom2 == 4) {
+							if(val[0] == 1 && val[1] == 2 && val[2] == 3 && val[3] == 4) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 2 && val[2] == 3 && val[3] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 2 && val[2] == 4 && val[3] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[1] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 1 && val[1] == 3 && val[2] == 4 && val[3] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2 && val[1] == 3 && val[2] == 4 && val[3] == 5) {
+								dice[0] = (int)(Math.random()*6+1);
+								dice[2] = (int)(Math.random()*6+1);
+								dice[3] = (int)(Math.random()*6+1);
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+						} //Till om du vill slå om 4
+						
+						else if(slaom2 == 5) {
+							dice[0] = (int)(Math.random()*6+1);
+							dice[1] = (int)(Math.random()*6+1);
+							dice[2] = (int)(Math.random()*6+1);
+							dice[3] = (int)(Math.random()*6+1);
+							dice[4] = (int)(Math.random()*6+1);
+							System.out.println("Tärning 1: " + dice[0]);
+							System.out.println("Tärning 2: " + dice[1]);
+							System.out.println("Tärning 3: " + dice[2]);
+							System.out.println("Tärning 4: " + dice[3]);
+							System.out.println("Tärning 5: " + dice[4]);
+						}
+						
+						
+			}	//Till om du vill slå om tärningarna eller inte
+		
+			
+			System.out.println("Vart vill du skriva in? Läs till höger om tabellen ");
+			
+			
+			
+			System.out.println("Spelare\t|" + namn[0] + "\t|" + namn[1] + "\t|" + namn[2] + "\t|" + namn[3] + "\t|" + namn[4] + "\t| Nummer");
+			System.out.println("Ettor: \t|" + var1[1] + "\t|" + val2[1] + "\t|" + val3[1] + "\t|" + val4[1] + "\t|" + val5[1] + "\t| 1");
+			System.out.println("Tvåor: \t|" + var1[2] + "\t|" + val2[2] + "\t|" + val3[2] + "\t|" + val4[2] + "\t|" + val5[2] + "\t| 2");
+			System.out.println("Treor: \t|" + var1[3] + "\t|" + val2[3] + "\t|" + val3[3] + "\t|" + val4[3] + "\t|" + val5[3] + "\t| 3");
+			System.out.println("Fyror: \t|" + var1[4] + "\t|" + val2[4] + "\t|" + val3[4] + "\t|" + val4[4] + "\t|" + val5[4] + "\t| 4");
+			System.out.println("Femmor:\t|" + var1[5] + "\t|" + val2[5] + "\t|" + val3[5] + "\t|" + val4[5] + "\t|" + val5[5] + "\t| 5");
+			System.out.println("Sexor: \t|" + var1[6] + "\t|" + val2[6] + "\t|" + val3[6] + "\t|" + val4[6] + "\t|" + val5[6] + "\t| 6");
+			System.out.println("Summa: \t|" + var1[7] + "\t|" + val2[7] + "\t|" + val3[7] + "\t|" + val4[7] + "\t|" + val5[7] + "\t| 7");
+			System.out.println("Bonus: \t|" + var1[8] + "\t|" + val2[8] + "\t|" + val3[8] + "\t|" + val4[8] + "\t|" + val5[8] + "\t| 8");
+			System.out.println("Par: \t|" + var1[9] + "\t|" + val2[9] + "\t|" + val3[9] + "\t|" + val4[9] + "\t|" + val5[9] + "\t| 9");
+			System.out.println("2-par: \t|" + var1[10] + "\t|" + val2[10] + "\t|" + val3[10] + "\t|" + val4[10] + "\t|" + val5[10] + "\t| 10");
+			System.out.println("3-tal: \t|" + var1[11] + "\t|" + val2[11] + "\t|" + val3[11] + "\t|" + val4[11] + "\t|" + val5[11] + "\t| 11");
+			System.out.println("4-tal: \t|" + var1[12] + "\t|" + val2[12] + "\t|" + val3[12] + "\t|" + val4[12] + "\t|" + val5[12] + "\t| 12");
+			System.out.println("Kåk: \t|" + var1[13] + "\t|" + val2[13] + "\t|" + val3[13] + "\t|" + val4[13] + "\t|" + val5[13] + "\t| 13");
+			System.out.println("Ls: \t|" + var1[14] + "\t|" + val2[14] + "\t|" + val3[14] + "\t|" + val4[14] + "\t|" + val5[14] + "\t| 14");
+			System.out.println("Ss: \t|" + var1[15] + "\t|" + val2[15] + "\t|" + val3[15] + "\t|" + val4[15] + "\t|" + val5[15] + "\t| 15");
+			System.out.println("Chans: \t|" + var1[16] + "\t|" + val2[16] + "\t|" + val3[16] + "\t|" + val4[16] + "\t|" + val5[16] + "\t| 16");
+			System.out.println("YATZY: \t|" + var1[17] + "\t|" + val2[17] + "\t|" + val3[17] + "\t|" + val4[17] + "\t|" + val5[17] + "\t| 17");
+			System.out.println("Summa: \t|" + var1[0] + "\t|" + val2[0] + "\t|" + val3[0] + "\t|" + val4[7] + "\t|" + val5[7] + "\t|");
+		
+		
+		}while(run);
+	}
+
+}

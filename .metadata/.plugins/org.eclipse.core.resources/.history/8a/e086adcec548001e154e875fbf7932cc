@@ -1,0 +1,37 @@
+package extrauppgifter;
+
+import java.util.Scanner;
+
+public class Uppg2komma6b {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Hur mycket pengar vill du ha:");
+		
+		//skriver in ett tal
+		
+		int tal = input.nextInt();
+		
+		// tar det talet + 100 
+		
+		tal = tal + 100;
+		
+		// gör en variabel som tar det talet / 500
+		
+		int tal2 = tal /500;
+		
+		//tar det som är kvar av "tal" efter att du delat med 500
+		
+		tal = tal%500;
+		
+		//tar det som va kvar av "tal" efter / 500 och tar det delat med 100
+		
+		int tal3 = tal/100;
+		
+		System.out.println(tal3 + tal2);
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package extraMetodUppgifter;
+
+import java.util.Scanner;
+
+public class Uppg8 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Hur många rader: ");
+		int rader = input.nextInt();
+		System.out.println("Hur många kolumner: ");
+		int kolumn = input.nextInt();
+		System.out.println("Vilket nummer vill du ha i rutorna?");
+		int siffra = input.nextInt();
+		
+		System.out.println(tabell(rader, kolumn, siffra));
+		
+		
+
+	}
+	public static String tabell(int rad, int kolumn, int siffra) {
+		String tabell = "";
+		String ruta = "[" +"1"+ "]";
+		for(int i = 0; rad > i; i++) {
+			for(int k = 0; kolumn > k; k++) {
+				tabell = tabell + ruta;
+			}
+			tabell = tabell + "\n";
+		}
+		return tabell;
+	}
+
+}

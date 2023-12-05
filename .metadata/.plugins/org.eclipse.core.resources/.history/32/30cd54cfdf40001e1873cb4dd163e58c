@@ -1,0 +1,13 @@
+package utmatning;
+
+public class IntroTE2a {
+
+	public static void main(String[] args) {
+		// Utmatning
+		System.out.print("Hej Hej");
+		System.out.println(" hej");
+		
+
+	}
+
+}

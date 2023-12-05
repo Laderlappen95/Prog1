@@ -1,0 +1,91 @@
+package paket;
+
+import java.util.Scanner;
+
+public class YatzyTvåPunktNoll {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		//Variabler
+		
+		int dice[] = new int[10];
+		boolean run = true;
+		int val[] = new int[10];
+		
+		do {
+			
+		System.out.println("Hur många spelare? Max 5");
+		int spelare = input.nextInt();
+		
+		
+		dice[0] = (int)(Math.random()*6+1);
+		dice[1] = (int)(Math.random()*6+1);
+		dice[2] = (int)(Math.random()*6+1);
+		dice[3] = (int)(Math.random()*6+1);
+		dice[4] = (int)(Math.random()*6+1);
+		
+		System.out.println("Tärning 1: " + dice[0]);
+		System.out.println("Tärning 2: " + dice[1]);
+		System.out.println("Tärning 3: " + dice[2]);
+		System.out.println("Tärning 4: " + dice[3]);
+		System.out.println("Tärning 5: " + dice[4]);
+		
+		System.out.println("Vill du slå om nån tärning? j/n");
+		char slaom = input.next().charAt(0);
+			if(slaom == 'j') {
+				System.out.println("Hur många vill du slå om?");
+					int slaom2 = input.nextInt();
+						if(slaom2 == 1) {
+							System.out.println("Vilken vill du slå om?");
+							val[0] = input.nextInt();
+							if(val[0] == 1) {
+								dice[0] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 2) {
+								dice[1] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 3) {
+								dice[2] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 4) {
+								dice[3] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+							else if(val[0] == 5) {
+								dice[4] = (int)(Math.random()*6+1);
+								System.out.println("Tärning 1: " + dice[0]);
+								System.out.println("Tärning 2: " + dice[1]);
+								System.out.println("Tärning 3: " + dice[2]);
+								System.out.println("Tärning 4: " + dice[3]);
+								System.out.println("Tärning 5: " + dice[4]);
+							}
+						}
+			}
+		
+		
+		
+		
+		}while(run);
+	}
+
+}

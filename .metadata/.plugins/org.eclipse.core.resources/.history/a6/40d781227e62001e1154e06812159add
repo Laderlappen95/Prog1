@@ -1,0 +1,30 @@
+package packet;
+
+import java.util.Scanner;
+
+public class TestTest {
+
+	public static void main(String[] args) {
+		//Scannerobjekt
+		Scanner input = new Scanner(System.in);
+		
+		//variabler
+		char n;
+		boolean run = true;
+		int dice1;
+		int dice2;
+		double satsa;
+		
+		do {
+			System.out.println("Hur mycket vill du satsa?");
+			satsa = input.nextDouble();
+			dice1 = (int)(Math.random()*6+1);
+			dice2 = (int)(Math.random()*6+1);
+			System.out.println("Tärning 1: " + dice1);
+			System.out.println("Tärning 2: " + dice2);
+			
+		}while(run);
+
+	}
+
+}

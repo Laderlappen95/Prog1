@@ -1,0 +1,22 @@
+package pu1;
+
+import java.util.Scanner;
+
+public class Uppg4 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Skriv ditt för och efternamn här: ");
+		
+		String namn = input.next();
+		
+		String namn2 = input.next();
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,87 @@
+package packet;
+
+import java.util.Scanner;
+
+public class YatzyBräde {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		String [] namn = new String[5];
+		int [] dice = new int[100];
+
+		System.out.println("Vilka spelar? Använd inte mer än 6 tecken");
+		namn[0] = input.next();
+		namn[1] = input.next();
+		namn[2] = input.next();
+		namn[3] = input.next();
+		namn[4] = input.next();
+
+		int dice1[] = new int[100];
+		int dice2[] = new int[100];
+		int dice3[] = new int[100];
+		int dice4[] = new int[100];
+		int dice5[] = new int[100];
+
+		for(int s = 0; s>=0; s++) {
+
+
+
+			for(int i = 0; i>=0; i++) {
+
+
+				dice1[i] = (int)(Math.random()*6+1);
+				dice2[i]= (int)(Math.random()*6+1);
+				dice3[i] = (int)(Math.random()*6+1);
+				dice4[i] = (int)(Math.random()*6+1);
+				dice5[i] = (int)(Math.random()*6+1);
+				System.out.println("Tärning 1: " + dice1[i]);
+				System.out.println("Tärning 2: " + dice1[i]);
+				System.out.println("Tärning 3: " + dice1[i]);
+				System.out.println("Tärning 4: " + dice1[i]);
+				System.out.println("Tärning 5: " + dice1[i]);
+				
+				
+				
+				System.out.println("IGEN? 10");
+				int igen = input.nextInt();
+				if(igen == 10) {
+					i=-3;
+				}
+			}
+
+
+
+
+			System.out.println(dice[0] + dice[1] + " "+dice[2]);
+
+
+			System.out.println("Spelare\t|" + namn[0] + "\t|" + namn[1] + "\t|" + namn[2] + "\t|" + namn[3] + "\t|" + namn[4] + "\t|");
+			System.out.println("Ettor: \t|" + dice1[1] + "\t|" + dice2[1] + "\t|" + dice3[1] + "\t|" + dice4[1] + "\t|" + dice5[1] + "\t|");
+			System.out.println("Tvåor: \t|" + dice1[2] + "\t|" + dice2[2] + "\t|" + dice3[2] + "\t|" + dice4[2] + "\t|" + dice5[2] + "\t|");
+			System.out.println("Treor: \t|" + dice1[3] + "\t|" + dice2[3] + "\t|" + dice3[3] + "\t|" + dice4[3] + "\t|" + dice5[3] + "\t|");
+			System.out.println("Fyror: \t|" + dice1[4] + "\t|" + dice2[4] + "\t|" + dice3[4] + "\t|" + dice4[4] + "\t|" + dice5[4] + "\t|");
+			System.out.println("Femmor:\t|" + dice1[5] + "\t|" + dice2[5] + "\t|" + dice3[5] + "\t|" + dice4[5] + "\t|" + dice5[5] + "\t|");
+			System.out.println("Sexor: \t|" + dice1[6] + "\t|" + dice2[6] + "\t|" + dice3[6] + "\t|" + dice4[6] + "\t|" + dice5[6] + "\t|");
+			System.out.println("Summa: \t|" + dice1[7] + "\t|" + dice2[7] + "\t|" + dice3[7] + "\t|" + dice4[7] + "\t|" + dice5[7] + "\t|");
+			System.out.println("Bonus: \t|" + dice1[8] + "\t|" + dice2[8] + "\t|" + dice3[8] + "\t|" + dice4[8] + "\t|" + dice5[8] + "\t|");
+			System.out.println("Par: \t|" + dice1[9] + "\t|" + dice2[9] + "\t|" + dice3[9] + "\t|" + dice4[9] + "\t|" + dice5[9] + "\t|");
+			System.out.println("2-par: \t|" + dice1[10] + "\t|" + dice2[10] + "\t|" + dice3[10] + "\t|" + dice4[10] + "\t|" + dice5[10] + "\t|");
+			System.out.println("3-tal: \t|" + dice1[11] + "\t|" + dice2[11] + "\t|" + dice3[11] + "\t|" + dice4[11] + "\t|" + dice5[11] + "\t|");
+			System.out.println("4-tal: \t|" + dice1[12] + "\t|" + dice2[12] + "\t|" + dice[12] + "\t|" + dice4[12] + "\t|" + dice5[12] + "\t|");
+			System.out.println("Kåk: \t|" + dice1[13] + "\t|" + dice2[13] + "\t|" + dice3[13] + "\t|" + dice4[13] + "\t|" + dice5[13] + "\t|");
+			System.out.println("Ls: \t|" + dice1[14] + "\t|" + dice2[14] + "\t|" + dice3[14] + "\t|" + dice4[14] + "\t|" + dice5[14] + "\t|");
+			System.out.println("Ss: \t|" + dice1[15] + "\t|" + dice2[15] + "\t|" + dice3[15] + "\t|" + dice4[15] + "\t|" + dice5[15] + "\t|");
+			System.out.println("Chans: \t|" + dice1[16] + "\t|" + dice2[16] + "\t|" + dice3[16] + "\t|" + dice4[16] + "\t|" + dice5[16] + "\t|");
+			System.out.println("YATZY: \t|" + dice1[17] + "\t|" + dice2[17] + "\t|" + dice3[17] + "\t|" + dice4[17] + "\t|" + dice5[17] + "\t|");
+			System.out.println("Summa: \t|" + dice1[0] + "\t|" + dice2[0] + "\t|" + dice3[0] + "\t|" + dice4[7] + "\t|" + dice5[7] + "\t|");
+			System.out.println("TA BORT S");
+			char ta = input.next().charAt(0);
+			if(ta== 'j') {
+				s= - 3;
+			}
+		}
+	}
+
+}
